@@ -47,42 +47,42 @@
 
 //creating component with state
 
-var Photo = React.createClass({
-
-		getInitialState : function(){
-			return {
-				liked : false
-			}
-		},
-
-		toggleLiked : function(){
-      
-	    this.setState({
-				liked : !this.state.liked
-			})
-		},
-
-    render : function() {
-		
-		  var buttonClass= this.state.liked ? 'active' : '';
-			return ( <div className='photo'> 
-							 		<img src={this.props.src}/>
-									<div className='bar'>
-										<button onClick={this.toggleLiked} className={buttonClass} >
- 												 ♥
-										</button>
-										<span> {this.props.caption}</span>
-									</div>
-			         </div>
-			)
-
-		}
-
-
-});
-
-React.render(<Photo src="https://facebook.github.io/react/img/logo.svg" caption="ReactJS" />,document.body);
-
+//var Photo = React.createClass({
+//
+//		getInitialState : function(){
+//			return {
+//				liked : false
+//			}
+//		},
+//
+//		toggleLiked : function(){
+//      
+//	    this.setState({
+//				liked : !this.state.liked
+//			})
+//		},
+//
+//    render : function() {
+//		
+//		  var buttonClass= this.state.liked ? 'active' : '';
+//			return ( <div className='photo'> 
+//							 		<img src={this.props.src}/>
+//									<div className='bar'>
+//										<button onClick={this.toggleLiked} className={buttonClass} >
+// 												 ♥
+//										</button>
+//										<span> {this.props.caption}</span>
+//									</div>
+//			         </div>
+//			)
+//
+//		}
+//
+//
+//});
+//
+//React.render(<Photo src="https://facebook.github.io/react/img/logo.svg" caption="ReactJS" />,document.body);
+//
 //------------------------------------------
 
 //creating photo gallery component. composing photo component inside the photo gallery component. Passing data through the top level components.
